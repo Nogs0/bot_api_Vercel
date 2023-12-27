@@ -8,9 +8,8 @@
   },
   "scripts": {
     "dev": "tsx src/server.ts",
-    "build": "tsup src",
-    "vercel-build": "npx prisma migrate deploy",
-    "start": "node dist/server.js"
+    "vercel-build": "tsup src && npx prisma migrate deploy",
+    "start": "node src/server.ts"
   },
   "author": "joao",
   "license": "MIT",
