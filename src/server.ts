@@ -115,6 +115,11 @@ app.post('/message', async (request, reply) => {
         });
 })
 
+app.post('/teste', async (request, reply) => {
+
+    return reply.code(200).send(request.body)
+});
+
 app.listen({
     host: '0.0.0.0',
     port: process.env.PORT ? Number(process.env.PORT) : 3333
