@@ -124,7 +124,7 @@ app.post('/teste', async (request, reply) => {
             }
         ]
     });
-});
+})
 
 app.listen({
     host: '0.0.0.0',
