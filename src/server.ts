@@ -87,6 +87,17 @@ app.post('/drivers/update', async (request, reply) => {
         });
 })
 
+app.post('/test', (request, reply) => {
+
+    return reply.code(200).send({
+        "replies": [
+            {
+                "message": request.body
+            }
+        ]
+    });
+})
+
 app.post('/message', async (request, reply) => {
 
     let driversOn = await prisma.driver.findMany({
@@ -104,7 +115,6 @@ app.post('/message', async (request, reply) => {
 
     return reply
         .code(200)
-        .code(200)
         .header("Content-type", "application/json;charset=utf-8")
         .send({
             "replies": [
@@ -113,17 +123,6 @@ app.post('/message', async (request, reply) => {
                 }
             ]
         });
-})
-
-app.post('/teste', async (request, reply) => {
-
-    return reply.code(200).send({
-        "replies": [
-            {
-                "message": request.body
-            }
-        ]
-    });
 })
 
 app.listen({
