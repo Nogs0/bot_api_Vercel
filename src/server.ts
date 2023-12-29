@@ -92,7 +92,7 @@ app.post('/test', (request, reply) => {
     return reply.code(200).send({
         "replies": [
             {
-                "message": request.body
+                "message": request.headers.driver
             }
         ]
     });
