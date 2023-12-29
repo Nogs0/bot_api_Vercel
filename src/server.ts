@@ -96,7 +96,7 @@ app.post('/message', async (request, reply) => {
     });
 
     driversOn = shuffle(driversOn);
-    let messageToReturn = "Olá, tudo bem? Espero que sim!\nEstou indisponível no momento! 😓";
+    let messageToReturn = "Olá, tudo bem? Espero que sim!\nEstou indisponível no momento! 😓\nEm caso de agendamentos, respondo em alguns instantes! 😁";
     if (driversOn.length > 0)
         messageToReturn += "\nMas, a RGS conta com motoristas preparados para lhe atender! 🚗";
     for (let i = 0; i < driversOn.length; i++) 
