@@ -117,7 +117,13 @@ app.post('/message', async (request, reply) => {
 
 app.post('/teste', async (request, reply) => {
 
-    return reply.code(200).send(request.body)
+    return reply.code(200).send({
+        "replies": [
+            {
+                "message": request.body
+            }
+        ]
+    });
 });
 
 app.listen({
