@@ -1,0 +1,12 @@
+{
+    "appPackageName": "tkstudio.autoresponderforwa",
+    "messengerPackageName": "tkstudio.autoresponderforwa",
+    "query": {
+        "sender": "+961410642997[test]",
+        "message": "Hum",
+        "isGroup": false,
+        "groupParticipant": "",
+        "ruleId": 2,
+        "isTestMessage": true
+    }
+}
