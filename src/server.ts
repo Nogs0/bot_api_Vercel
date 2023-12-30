@@ -87,12 +87,18 @@ app.post('/drivers/update', async (request, reply) => {
         });
 })
 
-app.post('/test', (request, reply) => {
+app.post('/test', async (request, reply) => {
+
+    let driver = await prisma.driver.findFirstOrThrow({
+        where: {
+            phone_number: request.headers.driver?.toString()
+        }
+    })
 
     return reply.code(200).send({
         "replies": [
             {
-                "message": request
+                "message": driver.name
             }
         ]
     });
