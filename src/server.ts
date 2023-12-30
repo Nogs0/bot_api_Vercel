@@ -89,6 +89,8 @@ app.post('/drivers/update', async (request, reply) => {
 
 app.post('/test', (request, reply) => {
 
+    
+  console.log(request.headers)
     return reply.code(200).send({
         "replies": [
             {
